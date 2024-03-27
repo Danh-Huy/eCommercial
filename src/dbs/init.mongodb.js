@@ -1,6 +1,6 @@
 const mongoose =  require("mongoose")
-
-const connectionString = `mongodb://localhost:27017/PersonalBlog`
+const {db:{host, name, port}} = require('../configs/config.mongodb')
+const connectionString = `mongodb://${host}:${port}/${name}`
 
 class Database{
     constructor(){
@@ -14,7 +14,7 @@ class Database{
         }
         mongoose.connect(connectionString, {
             maxPoolSize: 50
-        }).then(_ => console.log(`Connect to MongoDB successfully`))
+        }).then(_ => console.log(`Connect to MongoDB successfully through: ${connectionString}`))
                 .catch(err => console.log(`Connect Error ${err}`))
     }
     static getInstance(){
