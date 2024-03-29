@@ -20,4 +20,4 @@ var keyTokenModel = new Schema({
     timestamps: true
 })
 
-module.exports = mongoose.model(DOCUMENT_NAME, keyTokenModel)
+module.exports = model(DOCUMENT_NAME, keyTokenModel)
