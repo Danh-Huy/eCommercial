@@ -9,7 +9,10 @@ var keyTokenModel = new Schema({
         require: true,
         ref: 'Shop'
     },
-    publickey:{
+    publicKey:{
+        type: String, require: true
+    },
+    privateKey:{
         type: String, require: true
     },
     refreshToken:{

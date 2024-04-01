@@ -6,12 +6,16 @@ const compression = require("compression")
 const app = express()
 
 
-console.log(`Process: `, process.env)
+// console.log(`Process: `, process.env)
 
 //middleware
 app.use(morgan("combined"))
 app.use(helmet())
 app.use(compression())
+app.use(express.json())
+app.use(express.urlencoded({
+    extended: true
+}))
 
 //db
 require("./src/dbs/init.mongodb")

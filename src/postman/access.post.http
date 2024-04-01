@@ -3,5 +3,10 @@
 ### signUp
 
 POST {{url_dev}}shop/signup
-
-GET http://localhost:6869
+Content-Type: application/json
+x-api-key: 3ca8c5d8968e14d3f8af9821c006a975bc2edb8702dfae201a13c11a08bf89436c54b0ff652cafd449f9e475ac684f208ac61447a7d9f2ddc1f6f9d1ea440af5
+{
+    "name": "huy le",
+    "email": "ledanhhuy138@gmail.com",
+    "password": "abc123"
+}
